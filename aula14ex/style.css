@@ -1,0 +1,24 @@
+body {
+    background-color: cadetblue;
+    font: normal, 12pt, Arial;
+}
+
+section {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 3px 2px black;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    color: white;
+    font-style: italic;
+    text-align: center;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'Girassol' Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+header {
+    margin: 50px;
+    text-align: center;
+}
+section {
+    background-color: white;
+    border-radius: 10px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
+}
+
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+div#textarea input {
+    margin-top: 30px;
+}
+
+div#photos #img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+div#res {
+  margin-top: -20px;
+  color: black;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}

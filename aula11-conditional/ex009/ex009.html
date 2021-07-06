@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where are you from?</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Where are you from?</h1>
+    </header>
+
+    <section>
+            <div id="textarea">
+                <select id="txtval">
+                    <option>EUA</option>
+                    <option>Canadá</option>
+                    <option>Coreia do Sul</option>
+                    <option>Brasil</option>
+                </select>
+                <input type="button" value="Nacionalizar!" onclick="nacionalizar()">
+                <div id="photos">
+                        <img id="img" src="location.svg" alt="Foto Cultural">
+                    </div>
+                </div>
+              </div>
+            <div id="res"></div>
+    </section>
+
+    <footer>
+        <p>&copy; Paula Cynthia</p>
+    </footer>
+
+    <script>
+        function nacionalizar() {
+            var val = document.getElementById('txtval').value
+            var res = document.getElementById('res')
+
+            res.innerHTML = (`<p>O seu país de origem é ${val}!</p>`)
+
+            if (val == "Brasil") {
+                res.innerHTML += (`Sua nacionalidade é <strong>brasileiro</strong>!`)
+                img.src = "./assets/brasil.jpg"
+                document.body.style.background = '#b9846f'
+               
+
+            }else if(val == "EUA") {
+                res.innerHTML += (`Sua nacionalidade é <strong>estadunidense </strong>!`)
+                img.src = './assets/eua.jpg'
+                document.body.style.background = '#24223c'
+                
+
+            }else if(val == "Canadá") {
+                res.innerHTML += (`Sua nacionalidade é <strong>canadense</strong>!`)
+                img.src = './assets/canada.jpg'
+                document.body.style.background = '#182927'
+
+            }else {
+                res.innerHTML += (`Sua nacionalidade é <strong>sul-coreano</strong>!`)
+                img.src = './assets/korea.jpg'
+                document.body.style.background = '#83855a'
+            
+            }
+        }
+
+    </script>
+</body>
+
+</html>

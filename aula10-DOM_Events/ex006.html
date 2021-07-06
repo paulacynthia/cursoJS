@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - DOM</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        div#interation {
+            background-color: rgb(121, 180, 33);
+            color: white;
+            font-size: 30px;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Eventos no HTML: -->
+    <!--<div id="interation" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">Interaja...</div>-->
+    <div id="interation">Interaja...</div>
+</body>
+<script>
+
+    var interations = document.getElementById('interation') // Aqui irá para todas as funções;
+
+    // Eventos no JS:
+    interations.addEventListener('click', clicar)
+    interations.addEventListener('mouseenter', entrar)
+    interations.addEventListener('mouseout', sair)
+
+
+    function clicar() {
+        // Quando se cria uma variável aqui, ela fica isolada a somente esse escopo local
+        interations.innerText = 'Clicou!'
+        interations.style.background = 'red' // Muda a cor do background após o evento de clique realizado pelo usuário
+    }
+
+    function entrar() {
+        interations.innerText = 'Entrou!'
+    }
+
+    function sair() {
+        interations.innerText = 'Saiu!'
+        interations.style.background = 'rgb(121, 180, 33)'
+    }
+</script>
+
+</html>

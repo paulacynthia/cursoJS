@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var name = window.prompt('Digite o seu nome: ')
+        var n1 = Number(window.prompt('Digite o seu salário:'))
+        alert('Seu salário em real: ' + n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))
+        document.writeln(`O seu nome em letras maiúsculas é: ${name.toUpperCase()} <br>`)
+        document.writeln(`O seu nome em letras minúsculas é: ${name.toLowerCase()} <br>`)
+        document.writeln(`O total de letras que têm no seu nome são: ${name.length} <br>`)
+        prod = n1 * 5.55
+        document.writeln(`O seu salário em doláres seria representado como: ${prod.toLocaleString('pt-BR', { style: 'currency', currency: 'USD' })}`)
+    </script>
+</body>
+
+</html>

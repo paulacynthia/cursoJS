@@ -1,0 +1,29 @@
+body {
+    background-color:  rgb(70, 142, 236);
+  
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+section {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    align-items: center;
+    border-radius: 5px 3px;
+    box-shadow: 3px 3px 10px;
+    padding: 10px;
+}
+
+#number_container {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    font-style: italic;
+}

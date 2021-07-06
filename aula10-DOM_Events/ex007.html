@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Valores</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #title {
+
+            margin: 0;
+            padding: 15px;
+            text-align: center;
+            background-color: tomato;
+        }
+
+        /*
+        form {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: skyblue;
+            width: 200px;
+            margin-left: 230px;
+
+        }
+        */
+
+        input {
+            width: 100px;
+            display: block;
+            margin: 0 auto;
+            margin-top: 15px;
+            padding: 10px;
+
+        }
+
+        input#button {
+            margin-top: 20px;
+        }
+
+        span {
+            position: relative;
+            bottom: -10px;
+            left: 679px;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="title">
+        <h1>Somando Valores</h1>
+    </div>
+
+    <div>
+        <form>
+            <input type="number" name="number1" id="number1">
+            <span>+</span>
+            <input type="number" name="number2" id="number2">
+            <input type="button" id="button" value="Somar" onclick="somar()">
+            <input type="reset" name="reset" id="button" value="Some again">
+        </form>
+    </div>
+
+
+    <div id="result">
+        <h2>Resultado:</h2>
+    </div>
+
+    <script>
+
+        function somar() {
+            var tn1 = document.getElementById('number1')
+            var tn2 = window.document.querySelector('input#number2')
+            var result = window.document.querySelector('div#result')
+            // Como estamos adquirindo os números através de caixa de texto o typeof deles é string, faz-se necessário a conversão para number:
+
+            var n1 = Number(tn1.value) // Value é o valor que está dentro da caixa de texto n1
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+
+            result.innerHTML = `<h2>A soma entre ${n1} + ${n2} é igual a ${s}</h2>`
+
+
+        }
+        /*
+        function apagar() {
+            var erased = document.getElementsByClassName('reset')[0]
+            erased.innerHTML.this.value = '';
+
+        }
+        onclick="apagar()"*/
+
+    </script>
+</body>
+
+</html>

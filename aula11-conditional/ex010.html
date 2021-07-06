@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Verificação de Velocidade = DETRAN</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+
+        div#contents {
+            text-align: center;
+            align-items: center;
+            margin-top: 60px;
+            color: white;
+            font-size: 1.5em;
+            padding: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contents">
+        <h1>Sistema de Multas</h1>
+        <p>Insira abaixo qual a velocidade do carro:</p>
+        <input type="number" name="txtvel" id="txtvel" placeholder="Velocidade do carro:"> Km/h
+        <br>
+        <br>
+        <input type="button" value="Verificar" onclick="calcular()">
+    </div>
+    <div id="res">
+    </div>
+
+    <script>
+        function calcular() {
+            var txtv = document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            var vel = Number(txtv.value) // As caixas de texto sempre em são do typeof de string -> texto
+
+            res.innerHTML = (`<p align="center">Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`)
+
+            res.style.color = 'white'
+
+
+            if (vel > 60) {
+                res.innerHTML += '<p align="center">Você foi <strong>MULTADO</strong> por excesso de velocidade!</p>'
+                res.innerHTML += `<p align="center">Dirija sempre com cuidado!</p>`
+            } else {
+                res.innerHTML += (`<p align="center">Dirija sempre com cuidado! Matenha você e os outros em segurança!</p>`)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros Passos com DOM</title>
+    <style>
+        body {
+            background: cadetblue;
+            color: white;
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado:</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim!</div>
+    <div name="test">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere et, quam aspernatur vitae eum
+        rerum natus
+        debitis similique dolor laboriosam mollitia, magnam explicabo nemo vero odit voluptate molestias cum tenetur!
+    </div>
+    <div id="p2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus at cumque vero commodi ab, aspernatur harum
+        debitis beatae molestiae dolorum impedit eos, voluptatem odio! Necessitatibus odio unde quidem aliquid
+        praesentium?
+    </div>
+
+    <script>
+        //window.document.write("Olá, mundo! <br>") -> Maneira mais fácil de escrever no documento body, mas não é a melhor maneira de adicionar componentes;
+
+        // window.document.write(window.document.charset -> mostra o set de caracteres: UTF-8);
+
+        // window.document.write(window.navigator.appName) -> Você tem um objeto que é o navegador atual;
+
+        // Visualizar a URL que eu tô acessando: 127.0.0.1 na porta: 5500 -> window.document.write(window.document.URL).
+
+
+
+        /************************************************/
+        /* SELECIONANDO OS ELEMENTOS DA DOM POR MARCA: */
+        /**********************************************/
+
+        var corpo = window.document.body
+        // Pode colocar window.document ou só document :D como no alert 
+        var p1 = document.getElementsByTagName('p')[1] // O número zero indica que você quer pegar apenas o primeiro parágrafo que aparecer, se quisesse pegar o segundo, ao invés de colocar 0 seria 1 e assim, sucessivamente :D
+        // o primeiro parágrafo é 0 || o segundo é 1 || o terceiro é 2
+        // window.document.write(p1.innerText) -> o innerText é o texto que está dentro do primeiro parágrafo. O innerText pega o texto sem as childs, ou seja, sem as formatações do html. Caso você as queira, use innerHTML
+
+        document.write(p1.innerHTML) // innerHTML vem com a formatação, mas se você transformar em alert mostrará a tag <strong>DOM</strong> e não a formatação. 
+
+        // corpo.style.background = 'black' -> mudará a cor de fundo do body :)
+
+        // p1.style.color = 'blue' -> Isso fará com que o meu primeiro parágrafo mude para cor azul 
+
+        /*********************************************/
+        /* SELECIONANDO OS ELEMENTOS DA DOM POR ID: */
+        /*******************************************/
+
+        var d = window.document.getElementById('msg') //Como tá no singular, não precisa colocar colchete!!! 
+        d.style.background = 'green'
+        // d.innerText = 'Estou aguardando!'
+        window.document.getElementById('msg').innerText = 'Olá!'
+
+        //Lembrete: você pode omitir o window e utilizar apenas o document!
+
+        /***********************************************/
+        /* SELECIONANDO OS ELEMENTOS DA DOM POR NAME: */
+        /*********************************************/
+
+        var teste = window.document.getElementsByName('test')[0] //Como está no plural, tem que colocar o seu primeiro elemento! 
+        teste.innerText = "Hey!"
+
+
+        /***********************************************/
+        /* SELECIONANDO OS ELEMENTOS DA DOM POR CLASS:*/
+        /*********************************************/
+
+
+        /***************************************************/
+        /* SELECIONANDO OS ELEMENTOS DA DOM POR SELECTOR: */
+        /*************************************************/
+        var teste2 = window.document.querySelector('div#p2') //Se no lugar de id for class é só trocar o '#' por '.' 
+        teste2.style.color = 'pink'
+        teste2.style.background = 'black'
+
+
+    </script>
+</body>
+
+</html>
